@@ -1,0 +1,22 @@
+title: "sayoon.shell"
+tagline: ""
+description: "개발바닥 블로그"
+github_username: sayoonnn
+baseurl: "/"
+url: "https://sayoonnn.github.io"
+
+plugins:
+  - jemoji
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+sass:
+  style: compressed
+
+highlighter: rouge
+
+header_pages:
+  -
+
+# set the size of the text to 'large' or 'small', default is small
+font-size: large
