@@ -4,39 +4,52 @@
 
 /* FONTS */
 @charset "utf-8";
-@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700");
-@import url("syntax-highlighting.css");
 
 @font-face {
-  font-family: MainFont;
-  src: url("../fonts/JetBrainsMono-Regular-Hangul.ttf");
+  font-family: "JetBrains Regular";
+  src: url("../fonts/JetBrainsMono-Regular.ttf");
 }
-
 @font-face {
-  font-family: D2coding;
+  font-family: "JetBrains Regular";
   src: url("../fonts/D2CodingLigatureNerdFont-Regular.ttf");
+  unicode-range: U+AC00-D7AF;
 }
+
+@font-face {
+  font-family: "JetBrains Bold";
+  src: url("../fonts/JetBrainsMono-Bold.ttf");
+}
+@font-face {
+  font-family: "JetBrains Bold";
+  src: url("../fonts/D2CodingLigatureNerdFont-Bold.ttf");
+  unicode-range: U+AC00-D7AF;
+}
+
+@import url("syntax-highlighting.css");
 
 :root {
   --main-color: white;
-  --bg-color: rgba(0, 0, 0, 0.95);
+  --bg-color: rgba(0, 0, 0, 0.93);
 
   --text-color: #ddd;
   --pop-color: white;
   --alt-color: #2ed573;
   --light-alt-color: rgba(46, 213, 115);
+
+  --main-font: "JetBrains Regular";
+  --main-font-bold: "JetBrains Bold";
 }
 
 /* BASE */
 body {
   background-color: var(--bg-color);
   color: var(--main-color);
-  font-family: "D2coding", monospace;
+  font-family: var(--main-font);
   margin: 0 auto;
   width: 90%;
   max-width: 700px;
   line-height: 2em;
-  font-size: 0.9em;
+  font-size: 10px;
 }
 h1,
 h2,
@@ -50,6 +63,19 @@ h6 {
   color: var(--pop-color);
   font-size: 1em;
 }
+
+h1 {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 1.3em;
+}
+
+h3 {
+  font-size: 1.1em;
+}
+
 p,
 ul,
 ol {
@@ -152,6 +178,27 @@ ul :not(.menu) > ul > li:before {
   margin-right: 9px;
 }
 
+ul.post-categories > li {
+  font-family: var(--main-font-bold);
+}
+
+ul.post-list > li {
+  font-size: 0.9em;
+}
+
+ul.post-categories > li {
+  &::before {
+    content: none;
+  }
+  &::after {
+    content: ":";
+  }
+}
+
+ul.post-list > li::before {
+  content: "";
+}
+
 /* NAVIGATION */
 .menu {
   border-top: dashed 1px rgba(219, 219, 219, 0.9);
@@ -164,6 +211,7 @@ ul :not(.menu) > ul > li:before {
   padding-left: 0px;
   list-style-type: none;
   text-align: right;
+  line-height: 0.5em;
 }
 .menu ul li {
   display: inline;
@@ -172,7 +220,7 @@ ul :not(.menu) > ul > li:before {
 .menu ul li a {
   text-decoration: none;
 
-  color: var(--alt-color);
+  color: var(--text-color);
 }
 .menu ul li a:hover {
   text-decoration: none;
@@ -184,7 +232,7 @@ ul :not(.menu) > ul > li:before {
   margin-left: 10px;
   float: left;
   font-weight: bold;
-  color: var(--main-color);
+  color: var(--text-color);
 }
 
 /* ERROR PAGES */
@@ -193,11 +241,23 @@ div.error_box {
   margin: 100px;
   text-align: center;
 }
-div.error_box h1 {
-  font-size: 2em;
+div.error_box h2 {
+  font-size: 1.5em;
 }
 
 *::selection {
   background-color: var(--light-alt-color);
   color: black;
+}
+
+.post-meta {
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+}
+
+blockquote {
+  border-left: 3px solid var(--alt-color);
+  margin: 1.25rem;
+  padding: 0 20px;
 }
