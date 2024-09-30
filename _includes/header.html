@@ -3,14 +3,15 @@
 <header>
   <div class="menu">
     <ul>
-      <li class="page_title"><a href="/">{{ page.title }}</a></li>
-      {%- for path in page_paths -%} {%- assign my_page = site.pages | where:
-      "path", path | first -%} {%- if my_page.title -%}
+      <li class="page_title">
+        <a href="/">{{ site.title }}</a>
+      </li>
       <li>
         <a href="https://github.com/sayoonnn"> /github </a>
+      </li>
+      <li>
         <a href="/about">/about</a>
       </li>
-      {%- endif -%} {%- endfor -%}
     </ul>
   </div>
 </header>
