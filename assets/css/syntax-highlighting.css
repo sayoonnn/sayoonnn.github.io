@@ -11,7 +11,11 @@
 }
 
 code {
-  font-family: var(--main-font);
+  * {
+    font-family: var(--main-font) !important;
+    font-size: 1em;
+    line-height: 1.7em;
+  }
 }
 
 .language-plaintext {
@@ -19,7 +23,6 @@ code {
   background-color: #181818;
   border-radius: 0.3125rem;
   padding: 0.1875rem 0.3125rem;
-  font-size: 0.9em;
 }
 
 .highlight .hll {
@@ -157,4 +160,19 @@ code {
 }
 .highlight .ss {
   color: #a1b56c;
+}
+
+td.rouge-gutter.gl {
+  user-select: none;
+  text-align: right;
+  vertical-align: top;
+  color: #6b6b6b;
+  border-right: 1px solid #6b6b6b;
+  padding-right: 0.625rem !important;
+
+  word-break: keep-all !important;
+}
+
+td.rouge-code {
+  padding-left: 0.9375rem !important;
 }
