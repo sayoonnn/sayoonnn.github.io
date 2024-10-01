@@ -8,4 +8,11 @@ entries:
       limit: 2
       show_more: true
       show_more_url: _archives/archive.html
+
+  - title: toy projects
+    post_list:
+      category: toy
+      limit: 5
+      show_more: true
+      show_more_url: _archives/toy.html
   

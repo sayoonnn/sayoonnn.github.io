@@ -81,19 +81,28 @@ ul,
 ol {
   font-size: 1em;
   color: var(--text-color);
+  margin: 0;
 }
+
 a {
   text-decoration: underline;
   color: var(--alt-color);
 }
-a:hover {
+
+a:not(.badge):hover {
   color: var(--bg-color);
   background-color: var(--alt-color);
   transition: all ease-in-out 0.3s;
 }
+
+a.badge {
+  display: inline-flex;
+}
+
 .primary-text {
   color: var(--main-color);
 }
+
 @media only screen and (max-device-width: 500px) {
   * {
     font-size: 12px !important;
@@ -141,7 +150,6 @@ header {
 }
 header p {
   text-align: left;
-  margin: 0;
 }
 footer {
   margin-bottom: 20px;
@@ -259,4 +267,9 @@ blockquote {
   border-left: 3px solid var(--alt-color);
   margin: 1.25rem;
   padding: 0 20px;
+}
+
+pre.logo {
+  font-family: D2coding;
+  line-height: 1.5em;
 }

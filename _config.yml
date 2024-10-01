@@ -29,6 +29,7 @@ theme_config:
 
 markdown: kramdown
 kramdown:
+  hard_wrap: true
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     block:
