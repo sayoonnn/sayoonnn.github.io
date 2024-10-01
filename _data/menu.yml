@@ -2,13 +2,6 @@
 # https://github.com/riggraz/no-style-please#customize-the-menu
 
 entries:
-  - title: hello world!
-    post_list:
-      category: tmp
-      limit: 2
-      show_more: true
-      show_more_url: _archives/archive.html
-
   - title: toy projects
     post_list:
       category: toy
