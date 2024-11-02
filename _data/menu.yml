@@ -9,3 +9,10 @@ entries:
       show_more: true
       show_more_url: _archives/toy.html
   
+  - title: 공부기록
+    post_list:
+      category: 공부기록
+      limit: 5
+      show_more: true
+      show_more_url: _archives/study.html
+  
