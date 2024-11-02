@@ -19,6 +19,7 @@ code {
 }
 
 .language-plaintext {
+  font-family: var(--main-font) !important;
   color: var(--light-alt-color);
   background-color: #181818;
   border-radius: 0.3125rem;
