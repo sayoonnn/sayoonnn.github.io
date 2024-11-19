@@ -9,6 +9,13 @@ entries:
       show_more: true
       show_more_url: _archives/toy.html
   
+  - title: 웹
+    post_list:
+      category: web
+      limit: 10
+      show_more: true
+      show_more_url: _archives/web.html
+
   - title: 공부기록
     post_list:
       category: 공부기록
