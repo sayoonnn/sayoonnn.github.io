@@ -4,6 +4,7 @@ description: "개발바닥 블로그"
 github_username: sayoonnn
 baseurl: "/"
 url: "https://sayoonnn.github.io"
+asset_url: /asset
 
 include:
   - _archives
@@ -29,7 +30,7 @@ theme_config:
 
 markdown: kramdown
 kramdown:
-  hard_wrap: true
+  hard_wrap: false
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     block:
@@ -37,3 +38,7 @@ kramdown:
 
 # set the size of the text to 'large' or 'small', default is small
 font-size: large
+
+collections:
+  ps:
+    output: true

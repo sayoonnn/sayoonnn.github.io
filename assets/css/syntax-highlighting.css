@@ -13,7 +13,6 @@
 code {
   * {
     font-family: var(--main-font) !important;
-    font-size: 1em;
     line-height: 1.7em;
   }
 }
@@ -37,7 +36,7 @@ code {
   padding-top: 0.0625rem;
   padding-bottom: 0.0625rem;
 
-  font-size: 0.9em;
+  font-size: 1.1em;
 }
 .highlight table td {
   padding: 5px;

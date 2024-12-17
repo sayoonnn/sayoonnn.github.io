@@ -1,17 +1,20 @@
 ---
 layout: default
-title:  "POSTS"
+title: "POSTS"
 ---
 
 <article>
   <p class="post-meta">
-	<a href="{{ "/" | relative_url }}">{{ site.theme_config.back_home_text }}</a>
-    <time datetime="{{ page.date }}">{{ page.date | date: site.theme_config.date_format }}</time>
+    <a href="javascript:window.history.go(-1);"
+      >{{ site.theme_config.back_home_text }}</a
+    >
+    <time datetime="{{ page.date }}"
+      >{{ page.date | date: site.theme_config.date_format }}</time
+    >
   </p>
-	
+
   <h1>{{ page.title }}</h1>
-  <br/>
+  <br />
 
   {{ content }}
-  
 </article>

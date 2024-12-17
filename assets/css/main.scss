@@ -47,7 +47,7 @@ body {
   font-family: var(--main-font);
   margin: 0 auto;
   width: 90%;
-  max-width: 700px;
+  max-width: 1000px;
   line-height: 2em;
   font-size: 10px;
 }
@@ -166,11 +166,11 @@ img.detail_header {
 /* LISTS */
 :not(.menu) > ul {
   list-style: none;
-  padding-left: 1em;
+  padding-left: 0.5em;
 }
 ul :not(.menu) > ul {
   list-style: none;
-  padding-left: 3em;
+  padding-left: 0.5em;
   margin-top: 0.5em;
   margin-bottom: 0.7em;
 }
@@ -272,4 +272,8 @@ blockquote {
 pre.logo {
   font-family: D2coding;
   line-height: 1.5em;
+}
+
+img {
+  width: 70%;
 }
