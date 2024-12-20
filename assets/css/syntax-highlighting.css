@@ -10,6 +10,33 @@
   --main-font: "JetBrains Regular";
 }
 
+div.highlighter-rouge {
+  position: relative;
+}
+
+.copy-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  background: none;
+  border: none;
+  width: 100px;
+  margin: 10px 0;
+  font-size: 13px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #6b6b6b;
+
+  &:hover {
+    cursor: pointer;
+    color: white;
+  }
+}
+
 code {
   * {
     font-family: var(--main-font) !important;
@@ -36,7 +63,8 @@ code {
   padding-top: 0.0625rem;
   padding-bottom: 0.0625rem;
 
-  font-size: 1.1em;
+  font-size: 13px;
+  overflow: auto;
 }
 .highlight table td {
   padding: 5px;
