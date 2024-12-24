@@ -15,4 +15,11 @@ entries:
       limit: 10
       show_more: true
       show_more_url: _archives/algo.html
+
+  - title: 일기장
+    post_list:
+      category: diary
+      limit: 10
+      show_more: true
+      show_more_url: _archives/diary.html
   
