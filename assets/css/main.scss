@@ -56,7 +56,6 @@ body {
   max-width: 1000px;
   line-height: 2em;
   font-size: 10px;
-  white-space: nowrap;
 }
 h1,
 h2,
@@ -197,6 +196,7 @@ ul.post-categories > li {
 
 ul.post-list > li {
   font-size: 0.9em;
+  white-space: nowrap;
 }
 
 ul.post-categories > li {
