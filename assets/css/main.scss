@@ -24,6 +24,10 @@
   src: url("../fonts/D2CodingLigatureNerdFont-Bold.ttf");
   unicode-range: U+AC00-D7AF;
 }
+@font-face {
+  font-family: "Galmuri";
+  src: url("../fonts/Galmuri9.ttf");
+}
 
 @import url("syntax-highlighting.css");
 
@@ -36,8 +40,8 @@
   --alt-color: #2ed573;
   --light-alt-color: rgba(46, 213, 115);
 
-  --main-font: "JetBrains Regular";
-  --main-font-bold: "JetBrains Bold";
+  --main-font: "Galmuri";
+  --code-font: "JetBrains Regular";
 }
 
 /* BASE */
@@ -185,7 +189,7 @@ ul :not(.menu) > ul > li:before {
 }
 
 ul.post-categories > li {
-  font-family: var(--main-font-bold);
+  font-weight: bold;
 }
 
 ul.post-list > li {
