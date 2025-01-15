@@ -8,30 +8,36 @@
 @font-face {
   font-family: "JetBrains Regular";
   src: url("../fonts/JetBrainsMono-Regular.ttf");
+  font-display: swap;
 }
 @font-face {
   font-family: "JetBrains Regular";
   src: url("../fonts/D2CodingLigatureNerdFont-Regular.ttf");
   unicode-range: U+AC00-D7AF;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "JetBrains Bold";
   src: url("../fonts/JetBrainsMono-Bold.ttf");
+  font-display: swap;
 }
 @font-face {
   font-family: "JetBrains Bold";
   src: url("../fonts/D2CodingLigatureNerdFont-Bold.ttf");
   unicode-range: U+AC00-D7AF;
+  font-display: swap;
 }
 @font-face {
   font-family: "Galmuri";
   src: url("../fonts/Galmuri9.ttf");
+  font-display: swap;
 }
 @font-face {
   font-family: "GalmuriNum";
   src: url("../fonts/GalmuriMono9.ttf");
   unicode-range: U+0030-0039;
+  font-display: swap;
 }
 
 @import url("syntax-highlighting.css");
@@ -48,7 +54,6 @@
   --main-font: "Galmuri";
   --main-num-font: "GalmuriNum"
   --code-font: "JetBrains Regular";
-  font-display: swap;
   -webkit-text-size-adjust: 100%;
 }
 

@@ -8,7 +8,9 @@ gem "github-pages", group: :jekyll_plugins
 
 # Plugins used by the theme
 group :jekyll_plugins do
-  gem 'jemoji'
+  gem "jemoji"
+  gem "jekyll-seo-tag"
+  gem "jekyll-feed"
+  gem "jekyll-sitemap"
 end
 
-gem 'jekyll-feed'
