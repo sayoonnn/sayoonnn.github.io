@@ -28,6 +28,11 @@
   font-family: "Galmuri";
   src: url("../fonts/Galmuri9.ttf");
 }
+@font-face {
+  font-family: "GalmuriNum";
+  src: url("../fonts/GalmuriMono9.ttf");
+  unicode-range: U+0030-0039;
+}
 
 @import url("syntax-highlighting.css");
 
@@ -41,6 +46,7 @@
   --light-alt-color: rgba(46, 213, 115);
 
   --main-font: "Galmuri";
+  --main-num-font: "GalmuriNum"
   --code-font: "JetBrains Regular";
   font-display: swap;
   -webkit-text-size-adjust: 100%;
@@ -50,7 +56,7 @@
 body {
   background-color: var(--bg-color);
   color: var(--main-color);
-  font-family: var(--main-font);
+  font-family: "GalmuriNum", "Galmuri";
   margin: 0 auto;
   width: 90%;
   max-width: 1000px;
