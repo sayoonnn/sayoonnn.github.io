@@ -26,7 +26,10 @@
 
     --main-font: "NeoDunggenmoPro Regular";
     --code-font: "JetBrainsMono Regular";
+
     -webkit-text-size-adjust: 100%;
+
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
 }
 
 /* BASE */
@@ -40,6 +43,23 @@ body {
 
     font-size: 1rem;
     line-height: 1.7em;
+
+    overflow-y: scroll;
+}
+
+article {
+    padding: 0 0.625rem;
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    animation: fadeIn 0.3s ease-in-out;
 }
 
 h1,
@@ -116,21 +136,6 @@ p {
     word-wrap: break-word;
     word-break: break-word;
     white-space: pre-wrap;
-}
-
-article {
-    padding: 0 0.625rem;
-
-    @keyframes fadeIn {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
-
-    animation: fadeIn 0.25s ease-in-out;
 }
 
 footer {
