@@ -6,42 +6,13 @@
 @charset "utf-8";
 
 @font-face {
-    font-family: "JetBrains Regular";
-    src: url("../fonts/JetBrainsMono-Regular.ttf");
-    font-display: swap;
+    font-family: "JetBrainsMono Regular";
+    src: url("../fonts/JetBrainsMono-Regular.woff2");
 }
 
 @font-face {
-    font-family: "JetBrains Regular";
-    src: url("../fonts/D2CodingLigatureNerdFont-Regular.ttf");
-    unicode-range: U+AC00-D7AF;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "JetBrains Bold";
-    src: url("../fonts/JetBrainsMono-Bold.ttf");
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "JetBrains Bold";
-    src: url("../fonts/D2CodingLigatureNerdFont-Bold.ttf");
-    unicode-range: U+AC00-D7AF;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Galmuri";
-    src: url("../fonts/Galmuri9.ttf");
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "GalmuriNum";
-    src: url("../fonts/GalmuriMono9.ttf");
-    unicode-range: U+0030-0039;
-    font-display: swap;
+    font-family: "NeoDunggenmoPro Regular";
+    src: url("../fonts/GalmuriMono11.woff2");
 }
 
 :root {
@@ -53,9 +24,8 @@
     --alt-color: #2ed573;
     --light-alt-color: rgba(46, 213, 115);
 
-    --main-font: "Galmuri";
-    --main-num-font: "GalmuriNum";
-    --code-font: "JetBrains Regular";
+    --main-font: "NeoDunggenmoPro Regular";
+    --code-font: "JetBrainsMono Regular";
     -webkit-text-size-adjust: 100%;
 }
 
@@ -63,13 +33,26 @@
 body {
     background-color: var(--bg-color);
     color: var(--main-color);
-    font-family: "GalmuriNum", "Galmuri";
-    margin: 0 auto;
+    font-family: var(--main-font);
     width: 90%;
     max-width: 1000px;
-    line-height: 2em;
-    font-size: 10px;
+    margin: 0 auto;
+
+    font-size: 1rem;
+    line-height: 1.7em;
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    animation: fadeIn 0.25s ease-in-out;
 }
+
 h1,
 h2,
 h3,
@@ -122,62 +105,50 @@ a.badge {
 
 @media only screen and (max-device-width: 500px) {
     * {
-        font-size: 12px !important;
+        font-size: 0.75rem !important;
     }
 }
+
 b,
 strong {
     color: var(--main-color);
 }
+
 .invert {
     color: var(--bg-color);
     background-color: var(--main-color);
-    padding-left: 3px;
-    padding-right: 3px;
-    padding-top: 1px;
-    padding-bottom: 1px;
+    padding-left: 0.1875rem;
+    padding-right: 0.1875rem;
+    padding-top: 0.0625rem;
+    padding-bottom: 0.0625rem;
 }
 
-/* SMALL FONT OVERRIDE */
-body.large {
-    font-size: 16px;
-    line-height: 1.7em;
-}
-
-/* LAYOUT */
-.container {
-    margin-right: auto;
-    margin-left: auto;
-}
 p {
     word-wrap: break-word;
     word-break: break-word;
     white-space: pre-wrap;
 }
+
+article {
+    padding: 0 0.625rem;
+}
+
 footer {
     color: var(--text-color);
-    border-top: dashed 1px rgba(219, 219, 219, 0.9);
-    margin: 20px auto 15px;
-    padding-top: 10px;
+    border-top: dashed 0.0625rem rgba(219, 219, 219, 0.9);
+    margin: 1.25rem auto 0.9375rem;
+    padding-top: 0.625rem;
     text-align: right;
 }
 header {
-    margin-top: 25px;
-    margin-bottom: 10px;
+    margin-top: 1.5625rem;
+    margin-bottom: 0.625rem;
 }
 header p {
     text-align: left;
 }
 footer {
-    margin-bottom: 20px;
-}
-img.home_header {
-    width: 100%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-img.detail_header {
-    width: 100%;
+    margin-bottom: 1.25rem;
 }
 
 /* LISTS */
@@ -196,11 +167,11 @@ ul :not(.menu) > ul {
 }
 :not(.menu) > ul > li:before {
     content: "-";
-    margin-right: 9px;
+    margin-right: 0.5625rem;
 }
 ul :not(.menu) > ul > li:before {
     content: "*";
-    margin-right: 9px;
+    margin-right: 0.5625rem;
 }
 
 ul.post-categories > li {
@@ -227,43 +198,47 @@ ul.post-list > li::before {
 
 /* NAVIGATION */
 .menu {
-    border-top: dashed 1px rgba(219, 219, 219, 0.9);
-    border-bottom: dashed 1px rgba(219, 219, 219, 0.9);
-    margin-bottom: 25px;
+    border-top: dashed 0.0625rem rgba(219, 219, 219, 0.9);
+    border-bottom: dashed 0.0625rem rgba(219, 219, 219, 0.9);
+    margin-bottom: 1.5625rem;
 }
 .menu ul {
-    margin-top: 12px;
-    margin-bottom: 12px;
-    padding-left: 0px;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    padding-left: 0;
     list-style-type: none;
     text-align: right;
 }
+
 .menu ul li {
     display: inline;
-    margin-left: 10px;
+    margin-left: 0.625rem;
 }
+
 .menu ul li a {
     text-decoration: none;
-
     color: var(--text-color);
+    margin-right: 0.625rem;
+
+    &:hover {
+        color: var(--bg-color);
+        background-color: var(--main-color);
+    }
 }
-.menu ul li a:hover {
-    text-decoration: none;
-    color: var(--bg-color);
-    background-color: var(--main-color);
-}
+
 .menu ul li.page_title {
-    text-align: left;
-    margin-left: 10px;
-    float: left;
+    font-size: 1.2em;
     font-weight: bold;
+    float: left;
+    text-align: left;
+    margin-left: 0.625rem;
     color: var(--text-color);
 }
 
 /* ERROR PAGES */
 
 div.error_box {
-    margin: 100px;
+    margin: 6.25rem;
     text-align: center;
 }
 div.error_box h2 {
@@ -272,7 +247,7 @@ div.error_box h2 {
 
 *::selection {
     background-color: var(--light-alt-color);
-    color: black;
+    color: var(--bg-color);
 }
 
 .post-meta {
@@ -282,13 +257,13 @@ div.error_box h2 {
 }
 
 blockquote {
-    border-left: 3px solid var(--alt-color);
+    border-left: 0.1875rem solid var(--alt-color);
     margin: 1.25rem;
-    padding: 0 20px;
+    padding: 0 1.25rem;
 }
 
 pre.logo {
-    font-family: D2coding;
+    font-family: var(--main-font);
     line-height: 1.5em;
 }
 
@@ -352,11 +327,11 @@ code {
     padding-top: 0.0625rem;
     padding-bottom: 0.0625rem;
 
-    font-size: 13px;
+    font-size: 0.8125rem;
     overflow: auto;
 }
 .highlight table td {
-    padding: 5px;
+    padding: 0.3125rem;
 }
 .highlight table pre {
     margin: 0;
@@ -484,7 +459,7 @@ td.rouge-gutter.gl {
     text-align: right;
     vertical-align: top;
     color: #6b6b6b;
-    border-right: 1px solid #6b6b6b;
+    border-right: 0.0625rem solid #6b6b6b;
     padding-right: 0.625rem !important;
 
     word-break: keep-all !important;

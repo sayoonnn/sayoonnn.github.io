@@ -35,9 +35,6 @@ kramdown:
     block:
       line_numbers: true
 
-# set the size of the text to 'large' or 'small', default is small
-font-size: large
-
 collections:
   ps:
     output: true
