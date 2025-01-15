@@ -335,9 +335,10 @@ code {
 .language-plaintext {
     font-family: var(--main-font) !important;
     color: var(--light-alt-color);
-    background-color: #181818;
+    background-color: rgba(135, 131, 120, 0.15);
     border-radius: 0.3125rem;
-    padding: 0.1875rem 0.3125rem;
+    padding: 0.0625rem 0.3125rem;
+    margin: 0 0.1875rem;
 }
 
 .highlight .hll {
