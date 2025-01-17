@@ -3,7 +3,8 @@ tagline: ""
 description: "개발바닥 블로그"
 github_username: sayoonnn
 url: "https://sayoonnn.github.io"
-asset_url: /asset
+
+image_dir: /assets/images
 
 include:
   - _archives

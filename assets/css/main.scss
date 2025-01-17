@@ -59,7 +59,7 @@ article {
         }
     }
 
-    animation: fadeIn 0.1s ease-in-out;
+    animation: fadeIn 0.2s ease-in-out;
 }
 
 h1,
@@ -270,10 +270,6 @@ blockquote {
 pre.logo {
     font-family: var(--main-font);
     line-height: 1.5em;
-}
-
-img {
-    width: 70%;
 }
 
 /* highlights */
