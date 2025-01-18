@@ -5,6 +5,7 @@ github_username: sayoonnn
 url: "https://sayoonnn.github.io"
 
 image_dir: /assets/images
+favicon: /assets/favicon
 
 include:
   - _archives
