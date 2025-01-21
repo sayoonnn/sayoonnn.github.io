@@ -16,13 +16,13 @@
 }
 
 :root {
-    --main-color: white;
+    --main-color: rgba(219, 219, 219, 0.9);
     --bg-color: rgba(0, 0, 0, 0.93);
 
-    --text-color: #ddd;
-    --pop-color: white;
-    --alt-color: #2ed573;
-    --light-alt-color: rgba(46, 213, 115);
+    --text-color: rgba(219, 219, 219, 0.9);
+    --pop-color: rgba(219, 219, 219, 0.9);
+    --alt-color: rgba(46, 213, 115, 0.9);
+    --light-alt-color: rgba(46, 213, 115, 1);
 
     --main-font: "NeoDunggenmoPro Regular";
     --code-font: "JetBrainsMono Regular";
@@ -41,7 +41,7 @@ body {
     max-width: 1000px;
     margin: 0 auto;
 
-    font-size: 1rem;
+    font-size: 15px;
     line-height: 1.7em;
 
     overflow-y: scroll;
@@ -85,12 +85,8 @@ h3 {
     font-size: 1.1em;
 }
 
-p,
-ul,
-ol {
-    font-size: 1em;
-    color: var(--text-color);
-    margin: 0;
+p {
+    margin-top: 0.3em;
 }
 
 a {
@@ -262,9 +258,9 @@ div.error_box h2 {
 }
 
 blockquote {
-    border-left: 0.1875rem solid var(--alt-color);
-    margin: 1.25rem;
-    padding: 0 1.25rem;
+    border-left: 0.1875rem solid rgba(219, 219, 219, 0.9);
+    margin: 1rem;
+    padding: 0 1rem;
 }
 
 pre.logo {
