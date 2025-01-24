@@ -8,7 +8,7 @@ posts.size > include.limit-%} {%-assign limit_exceeded = true-%} {%-else-%}
   {%- for post in posts limit: include.limit -%}
   <li>
     <span>
-      -r--r--r-- 2 sayoon .&nbsp; {{- post.date | date:
+      -rwxr--r-- 2 sayoon .&nbsp; {{- post.date | date:
       site.theme_config.date_format -}}</span
     >
     <a href="{{ post.url | relative_url }}">{{ post.title | downcase }}</a>

@@ -2,6 +2,7 @@ title: "sayoon.shell"
 tagline: ""
 description: "개발바닥 블로그"
 github_username: sayoonnn
+baseurl: "/"
 url: "https://sayoonnn.github.io"
 
 img_dir: /assets/images
