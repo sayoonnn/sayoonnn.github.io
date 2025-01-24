@@ -32,6 +32,14 @@
     scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
 }
 
+@supports (padding: env(safe-area-inset-top)) {
+    body {
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
+        background-color: black; /* 블로그와 같은 배경색 */
+    }
+}
+
 html {
 	background-color: var(--bg-color);
 }
