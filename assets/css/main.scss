@@ -32,6 +32,10 @@
     scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
 }
 
+html {
+	background-color: var(--bg-color);
+}
+
 /* BASE */
 body {
     background-color: var(--bg-color);
