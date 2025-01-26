@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 변환 대상 디렉토리 설정
-target_dir="assets"
+target_dir="assets/images"
 
 # 디렉토리가 존재하지 않는 경우
 if [[ ! -d "$target_dir" ]]; then

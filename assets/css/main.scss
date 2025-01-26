@@ -33,7 +33,7 @@
 }
 
 html {
-	background-color: var(--bg-color);
+    background-color: var(--bg-color);
 }
 
 /* BASE */
@@ -322,7 +322,7 @@ code {
 .highlight {
     background: #000000;
     color: #ffffff;
-    padding-left: 0.625rem;
+    padding-left: 0.1875rem;
     border-radius: 0.625rem;
     padding-top: 0.0625rem;
     padding-bottom: 0.0625rem;
@@ -466,5 +466,5 @@ td.rouge-gutter.gl {
 }
 
 td.rouge-code {
-    padding-left: 0.9375rem !important;
+    padding-left: 0.625rem !important;
 }
