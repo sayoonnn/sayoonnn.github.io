@@ -21,7 +21,7 @@ entries:
       show_more: true
       show_more_url: _archives/algo.html
 
-  - title: 일기장
+  - title: 잡동사니
     post_list:
       category: diary
       limit: 10
