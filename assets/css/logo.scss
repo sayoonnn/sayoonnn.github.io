@@ -3,6 +3,8 @@
   align-items: center;
   text-decoration: none;
   background: var(--accent);
-  color: color-mix(in srgb, var(--accent), var(--accent-contrast-color) 90%);
+  color: var(--background);
   padding: 5px 10px;
+  font-size: 1.2em;
+  font-weight: bold;
 }

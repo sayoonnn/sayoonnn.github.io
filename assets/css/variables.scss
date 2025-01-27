@@ -1,8 +1,9 @@
 :root {
   /* COLOR VARIABLES */
-  --background: rgb(20, 20, 20);
+  --accent: rgb(122, 169, 64);
+  --background: color-mix(in srgb, var(--accent), rgb(10, 10, 10) 98%);
   --accent-contrast-color: rgb(20, 20, 20);
-  --color: rgb(230, 230, 230);
+  --color: rgba(255, 255, 255, 0.9);
   --border-color: rgba(255, 255, 255, 0.1);
   --article-link-color: var(inherit);
 }

@@ -2,12 +2,13 @@
   --shadow-color: color-mix(in srgb, var(--background), transparent 20%);
   display: none;
   flex-direction: column;
-  --shadow: 0 10px var(--shadow-color), -10px 10px var(--shadow-color), 10px 10px var(--shadow-color);
+  --shadow: 0 10px var(--shadow-color), -10px 10px var(--shadow-color),
+    10px 10px var(--shadow-color);
   position: absolute;
   background: var(--background);
   box-shadow: var(--shadow);
   color: white;
-  border: 2px solid;
+  border: 2px solid var(--accent);
   margin: 0;
   padding: 10px;
   top: 10px;
@@ -104,6 +105,7 @@
     }
 
     > li {
+      color: var(--color);
       flex: 0 0 auto;
 
       &:not(:last-of-type) {
@@ -119,7 +121,7 @@
 
   &--desktop {
     @media (max-width: $phone) {
-      display: none
+      display: none;
     }
   }
 
