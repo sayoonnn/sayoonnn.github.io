@@ -1,4 +1,5 @@
 baseurl = "/"
+defaultContentLanguage = "ko"
 languageCode = "ko-KR"
 paginate = 5
 
@@ -31,8 +32,8 @@ paginate = 5
   # If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated
   showLastUpdated = false
 
-  # set a custom favicon (default is a `themeColor` square)
-  # favicon = "favicon.ico"
+#   set a custom favicon (default is a `themeColor` square)
+  favicon = "/static/favicon-16x16.png"
 
   # Provide a string as a prefix for the last update date. By default, it looks like this: 2020-xx-xx [Updated: 2020-xx-xx] :: Author
   # updatedDatePrefix = "Updated"
@@ -75,25 +76,37 @@ paginate = 5
     subtitle = "개발바닥"
     owner = "sayoonnn"
     keywords = "개발"
-    copyright = "copyleft"
-    menuMore = "Show more"
-    readMore = "Read more"
-    readOtherPosts = "Read other posts"
-    newerPosts = "Newer posts"
-    olderPosts = "Older posts"
+    copyright = "sayoonnn"
+    menuMore = "링크"
+    readMore = "더보기"
+    readOtherPosts = "다른 글들"
+    newerPosts = "새 글"
+    olderPosts = "이전 글"
     missingContentMessage = "저런! 페이지를 찾을 수 없군요"
     missingBackButtonLabel = "돌아가기"
-    minuteReadingTime = "min read"
-    words = "words"
+    minuteReadingTime = "분"
+    words = "단어"
 
     [languages.ko.params.logo]
       logoText = "sayoonnn.shell"
       logoHomeLink = "/"
 
-    [languages.en.menu]
-      [[languages.en.menu.main]]
+    [languages.ko.menu]
+      [[languages.ko.menu.main]]
         identifier = "about"
-        name = "about me"
+        name = "/about me"
         url = "/about"
+		
+      [[languages.ko.menu.main]]
+        identifier = "github"
+        name = "/github"
+        url = "https://github.com/sayoonnn"
+		params = { NewTab = true }
 
-[module]
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[taxonomies]
+  category = "categories"

@@ -11,7 +11,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Fira Code', Monaco, Consolas, Ubuntu Mono, monospace;
+  font-family: "Fira Code", Monaco, Consolas, Ubuntu Mono, monospace;
   font-size: 1rem;
   line-height: 1.54;
   letter-spacing: -0.02em;
@@ -127,30 +127,57 @@ figure {
   }
 }
 
-code, kbd {
-  font-family: 'Fira Code', Monaco, Consolas, Ubuntu Mono, monospace !important;
+button {
+  position: relative;
+  font: inherit;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  background: transparent;
+  color: var(--accent);
+  padding: 5px 18px;
+  border: 3px solid var(--accent);
+  border-radius: var(--radius);
+  transition: background 0.15s linear;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+}
+
+code,
+kbd {
+  font-family: "Fira Code", Monaco, Consolas, Ubuntu Mono, monospace !important;
   font-feature-settings: normal;
-  background: color-mix(in srgb, var(--accent), transparent 80%);
+  background: color-mix(in srgb, var(--accent), transparent 95%);
   color: var(--accent);
   padding: 1px 6px;
   margin: 0 2px;
-  font-size: .95rem;
+  font-size: 0.95rem;
 
-  code, kbd {
+  code,
+  kbd {
     background: transparent;
     padding: 0;
     margin: 0;
   }
 }
 
+kbd {
+  border-top: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
+  border-left: 2px solid var(--accent);
+  border-right: 1px solid var(--accent);
+  border-bottom: 3px solid var(--accent);
+  border-radius: 4px;
+}
+
 pre {
   background: transparent !important;
   padding: 20px 10px;
   margin: 40px 0;
-  font-size: .95rem !important;
+  font-size: 0.95rem !important;
   overflow: auto;
-  border-top: 1px solid rgba(255, 255, 255, .1);
-  border-bottom: 1px solid rgba(255, 255, 255, .1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
   + pre {
     border-top: 0;
@@ -194,7 +221,7 @@ blockquote {
   }
 
   p:first-of-type:before {
-    content: '>';
+    content: ">";
     display: block;
     position: absolute;
     left: -25px;
@@ -210,11 +237,11 @@ blockquote {
     padding-top: 60px;
 
     p:before {
-      content: '';
+      content: "";
     }
 
     &:before {
-      content: '> From Twitter:';
+      content: "> From Twitter:";
       position: absolute;
       top: 20px;
       color: var(--accent);
@@ -230,19 +257,23 @@ blockquote {
 table {
   table-layout: auto;
   border-collapse: collapse;
-  width: 100%;
   margin: 40px 0;
+  text-align: center;
 }
 
 table,
 th,
 td {
-  border: 1px dashed var(--accent);
+  border: 1.5px solid var(--color);
   padding: 10px;
 }
 
 th {
-  color: var(--accent);
+  border-style: solid;
+  color: var(--color);
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 ul,
@@ -292,6 +323,7 @@ ol {
 mark {
   background: var(--accent);
   color: var(--accent-contrast-color);
+  padding: 0 2px;
 }
 
 .container {
@@ -342,5 +374,5 @@ hr {
 }
 
 sup {
- line-height: 0;
+  line-height: 0;
 }

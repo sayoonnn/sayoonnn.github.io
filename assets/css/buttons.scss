@@ -5,20 +5,15 @@
 }
 
 button,
-.button,
-a.button {
+.button {
   position: relative;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 8px 18px;
-  margin: 5px 0;
   text-decoration: none;
   text-align: center;
   border-radius: 8;
-  border: 1px solid var(--accent);
-  background: var(--accent);
-  color: var(--accent-contrast-color);
   font: inherit;
   font-weight: bold;
   appearance: none;
@@ -26,7 +21,7 @@ a.button {
   outline: none;
 
   &:hover {
-    background: color-mix(in srgb, var(--accent), transparent 10%);
+    background: color-mix(in srgb, var(--accent), transparent 95%);
   }
 
   /* variants */
@@ -50,7 +45,7 @@ a.button {
   /* sizes */
 
   &.small {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 
   &.wide {
