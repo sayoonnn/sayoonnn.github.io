@@ -1,6 +1,5 @@
 baseurl = "/"
 languageCode = "ko-KR"
-theme = "re-terminal"
 paginate = 5
 
 [params]
