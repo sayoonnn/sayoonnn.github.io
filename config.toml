@@ -107,6 +107,3 @@ paginate = 5
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
-
-[taxonomies]
-  category = "categories"
