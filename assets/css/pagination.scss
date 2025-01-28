@@ -37,11 +37,16 @@
   }
 
   &__buttons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: row wrap;
-    gap: 10px;
+    .previous {
+      display: flex;
+      justify-content: left;
+    }
+
+    .next {
+      display: flex;
+      justify-content: right;
+      margin-left: auto;
+    }
 
     a {
       text-decoration: none;

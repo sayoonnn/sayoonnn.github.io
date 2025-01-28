@@ -1,5 +1,6 @@
 .post-list {
   line-height: 1.5em;
+  white-space: nowrap;
 
   h3,
   h2 {
@@ -22,9 +23,9 @@
   a {
     padding: 1px 3px;
     color: var(--accent);
+    text-decoration: underline;
 
     &:hover {
-      text-decoration: none !important;
       background-color: var(--accent);
       color: var(--background);
     }

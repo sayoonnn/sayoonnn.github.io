@@ -2,9 +2,13 @@
 
 html {
   box-sizing: border-box;
-  overflow: scroll;
+  overflow-y: scroll;
   scrollbar-color: color-mix(in srgb, var(--accent), transparent 30%)
     transparent;
+
+  @media (max-width: $phone) {
+    font-size: 12px;
+  }
 }
 
 *,
@@ -28,10 +32,6 @@ body {
   font-variant-ligatures: contextual;
   -webkit-overflow-scrolling: touch;
   -webkit-text-size-adjust: 100%;
-
-  @media (max-width: $phone) {
-    font-size: 12px;
-  }
 }
 
 article {
