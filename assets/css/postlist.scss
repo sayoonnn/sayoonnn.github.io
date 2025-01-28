@@ -20,13 +20,17 @@
   }
 
   a {
-    padding: 2px;
+    padding: 1px 3px;
     color: var(--accent);
 
     &:hover {
-      text-decoration: underline;
+      text-decoration: none !important;
       background-color: var(--accent);
       color: var(--background);
+    }
+
+    &:active {
+      transform: scale(0.8);
     }
 
     transition: all 0.3s;

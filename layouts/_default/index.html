@@ -4,8 +4,8 @@
 </div>
 {{ end }}
 <div class="post-list">
-  <h2>~/index $ ls -la *</h2>
-  {{ range .Site.Taxonomies.tags }}
+  <h1>~/index $ ls -la *</h1>
+  {{ range .Site.Taxonomies.tags }} {{ if ne .Page.Title "문제풀이" }}
   <h3>{{ .Page.Title }}:</h3>
   <div>합계 {{ .Count }}</div>
   <ul>
@@ -16,6 +16,6 @@
     </li>
     {{ end }}
   </ul>
-  {{ end }} {{ partial "pagination.html" . }}
+  {{ end }} {{ end }}
 </div>
 {{ end }}

@@ -1,6 +1,6 @@
 +++
 title = "Assembly"
-date = "2025-01-28T12:39:11+09:00"
+date = "2024-11-03T12:39:11+09:00"
 author = "sayoon"
 tags = ["뭐했더라"]
 keywords = ["assembly", "어셈블리", "x86"]

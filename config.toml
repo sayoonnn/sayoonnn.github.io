@@ -1,7 +1,7 @@
 baseurl = "/"
 defaultContentLanguage = "ko"
 languageCode = "ko-KR"
-paginate = 5
+pagerSize = 5
 
 [params]
   # dir name of your main content (default is `content/posts`).
@@ -9,7 +9,7 @@ paginate = 5
   contentTypeName = "posts"
 
   # ["orange", "blue", "red", "green", "pink"]
-  themeColor = "green"
+#   themeColor = "green"
 
   # if you set this to 0, only submenu trigger will be visible
   showMenuItems = 1
@@ -30,13 +30,14 @@ paginate = 5
 
   # set post to show the last updated
   # If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated
-  showLastUpdated = false
+  enableGitInfo = true
+  showLastUpdated = true
 
-#   set a custom favicon (default is a `themeColor` square)
-  favicon = "/static/favicon-16x16.png"
+	#set a custom favicon (default is a `themeColor` square)
+  favicon = "/favicon/favicon-16x16.png"
 
   # Provide a string as a prefix for the last update date. By default, it looks like this: 2020-xx-xx [Updated: 2020-xx-xx] :: Author
-  # updatedDatePrefix = "Updated"
+  updatedDatePrefix = "마지막 수정"
 
   # set all headings to their default size (depending on browser settings)
   # oneHeadingSize = true # default
@@ -78,7 +79,7 @@ paginate = 5
     keywords = "개발"
     copyright = "sayoonnn"
     menuMore = "링크"
-    readMore = "더보기"
+    readMore = " 더보기 "
     readOtherPosts = "다른 글들"
     newerPosts = "새 글"
     olderPosts = "이전 글"
