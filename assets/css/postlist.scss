@@ -1,0 +1,38 @@
+.post-list {
+  line-height: 1.5em;
+
+  h3,
+  h2 {
+    font-size: 1.1em;
+  }
+
+  h3 {
+    margin: 25px 0 5px 0 !important;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0 0 0 10px;
+  }
+
+  div {
+    margin-left: 10px;
+  }
+
+  a {
+    padding: 1px 3px;
+    color: var(--accent);
+
+    &:hover {
+      text-decoration: none !important;
+      background-color: var(--accent);
+      color: var(--background);
+    }
+
+    &:active {
+      transform: scale(0.8);
+    }
+
+    transition: all 0.3s;
+  }
+}

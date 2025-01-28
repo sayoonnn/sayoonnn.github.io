@@ -1,0 +1,21 @@
+{{ define "main" }} {{ if .Content }}
+<div class="index-content {{ if .Params.framed -}}framed{{- end -}}">
+  {{ .Content }}
+</div>
+{{ end }}
+<div class="post-list">
+  <h1>~/index $ ls -la *</h1>
+  {{ range .Site.Taxonomies.tags }} {{ if ne .Page.Title "문제풀이" }}
+  <h3>{{ .Page.Title }}:</h3>
+  <div>합계 {{ .Count }}</div>
+  <ul>
+    {{ range .Pages }}
+    <li>
+      -rwxr--r-- 2 sayoon {{ .Date.Format "01 02 2006" }}
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+  </ul>
+  {{ end }} {{ end }}
+</div>
+{{ end }}

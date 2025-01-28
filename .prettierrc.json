@@ -1,0 +1,20 @@
+{
+  "singleQuote": false,
+  "scssBracketSpacing": true,
+  "overrides": [
+    {
+      "files": "*.scss",
+      "options": {
+        "bracketSpacing": true,
+        "insertPragma": false,
+		"tabWidth": 2
+      }
+    },
+    {
+      "files": "*.html",
+      "options": {
+		"tabWidth": 2
+      }
+    }
+  ]
+}
