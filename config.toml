@@ -118,3 +118,7 @@ subtitle = "개발바닥"
 	[markup.goldmark]
 		[markup.goldmark.renderer]
 			unsafe = true
+
+[mediaTypes]
+  [mediaTypes."application/xml"]
+    suffixes = ["xml"]
