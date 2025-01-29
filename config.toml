@@ -114,6 +114,12 @@ subtitle = "개발바닥"
 				url = "https://github.com/sayoonnn"
 				params = { NewTab = true }
 
+			[[languages.ko.menu.main]]
+				identifier = "blogrepo"
+				name = "/blog_repo"
+				url = "https://github.com/sayoonnn/sayoonnn.github.io"
+				params = { NewTab = true }
+
 [markup]
 	[markup.goldmark]
 		[markup.goldmark.renderer]
