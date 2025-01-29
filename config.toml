@@ -118,7 +118,3 @@ subtitle = "개발바닥"
 	[markup.goldmark]
 		[markup.goldmark.renderer]
 			unsafe = true
-
-[services]
-  [services.disqus]
-    shortname = 'your-disqus-shortname'
