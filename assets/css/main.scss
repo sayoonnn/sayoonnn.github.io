@@ -70,6 +70,10 @@ a {
     text-decoration: underline dotted !important;
   }
 
+  &:active {
+    opacity: 0.7;
+  }
+
   /* Waiting for a better times... */
   /* &:has(code) {
     text-decoration-color: var(--accent);

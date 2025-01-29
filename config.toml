@@ -112,10 +112,13 @@ subtitle = "개발바닥"
 				identifier = "github"
 				name = "/github"
 				url = "https://github.com/sayoonnn"
-		params = { NewTab = true }
+				params = { NewTab = true }
 
 [markup]
 	[markup.goldmark]
 		[markup.goldmark.renderer]
 			unsafe = true
 
+[services]
+  [services.disqus]
+    shortname = 'your-disqus-shortname'
