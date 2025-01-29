@@ -7,7 +7,7 @@
 
   &__title {
     display: flex;
-    text-align: center;
+	align-items: center;
     position: relative;
     margin: 20px 0 20px;
 
@@ -29,11 +29,16 @@
       left: 0;
       right: 0;
       width: 100%;
-      margin-top: 15px;
       height: 2px;
       z-index: 0;
-      background-color: var(--accent);
+	  border: none;
+	  background-color: var(--accent);
     }
+
+	a {
+		opacity: 0.5;
+		font-size: 1rem;
+	}
   }
 
   &__buttons {
