@@ -37,16 +37,8 @@
   }
 
   &__buttons {
-    .previous {
-      display: flex;
-      justify-content: left;
-    }
-
-    .next {
-      display: flex;
-      justify-content: right;
-      margin-left: auto;
-    }
+    display: flex;
+    justify-content: space-between;
 
     a {
       text-decoration: none;

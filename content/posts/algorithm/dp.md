@@ -44,8 +44,8 @@ ex) 병합정렬, 이분탐색, 거듭제곱연산...
 
 ## 문제
 
-[[2104: 부분배열 고르기]](/posts/probs/2104)  
-[[1463: 1로 만들기]](/posts/probs/1463)  
-[[1149: RGB 거리]](/posts/probs/1149)
+<a href="/posts/probs/2104" class="button">2104: 부분배열 고르기</a>  
+<a href="/posts/probs/1463" class="button">1463: 1로 만들기</a>  
+<a href="/posts/probs/1149" class="button">1149: RGB 거리</a>
 
 업데이트 중...
