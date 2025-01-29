@@ -21,3 +21,4 @@ $centerTheme: {{ if $.Site.Params.CenterTheme }}center{{ else }}flex-start{{ end
 @import "terms";
 @import "gist";
 @import "postlist";
+@import "comment";

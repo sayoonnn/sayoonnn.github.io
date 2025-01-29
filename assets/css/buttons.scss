@@ -21,7 +21,11 @@ button,
   outline: none;
 
   &:hover {
-    background: color-mix(in srgb, var(--accent), transparent 95%);
+    background: color-mix(in srgb, var(--accent), transparent 90%);
+  }
+
+  &:active {
+    opacity: 0.7;
   }
 
   /* variants */
