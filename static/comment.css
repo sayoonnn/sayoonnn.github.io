@@ -3,7 +3,19 @@
  * Copyright (c) 2018 GitHub Inc.
  * https://github.com/primer/primitives/blob/main/LICENSE
  */
+
+@font-face {
+  font-display: swap;
+  font-family: "Galmuri";
+  src: url("https://sayoonnn.github.io/fonts/GalmuriMono11.woff2")
+    format("woff2");
+}
+
 main {
+  --accent: rgba(101, 163, 255, 1);
+  --color: rgba(255, 255, 255, 0.9);
+  --background: rgb(15, 15, 15);
+
   --color-prettylights-syntax-comment: #768390;
   --color-prettylights-syntax-constant: #6cb6ff;
   --color-prettylights-syntax-entity: #dcbdfb;
@@ -34,40 +46,40 @@ main {
   --color-prettylights-syntax-brackethighlighter-angle: #768390;
   --color-prettylights-syntax-sublimelinter-gutter-mark: #545d68;
   --color-prettylights-syntax-constant-other-reference-link: #96d0ff;
-  --color-btn-text: #adbac7;
-  --color-btn-bg: #373e47;
-  --color-btn-border: #cdd9e51a;
+  --color-btn-text: var(--color);
+  --color-btn-bg: rgb(57, 108, 184);
+  --color-btn-border: transparent;
   --color-btn-shadow: 0 0 #0000;
   --color-btn-inset-shadow: 0 0 #0000;
-  --color-btn-hover-bg: #444c56;
-  --color-btn-hover-border: #768390;
+  --color-btn-hover-bg: rgb(50, 120, 225);
+  --color-btn-hover-border: transparent;
   --color-btn-active-bg: #3d444d;
-  --color-btn-active-border: #636e7b;
-  --color-btn-selected-bg: #2d333b;
-  --color-btn-primary-text: #fff;
-  --color-btn-primary-bg: #347d39;
-  --color-btn-primary-border: #cdd9e51a;
-  --color-btn-primary-shadow: 0 0 #0000;
-  --color-btn-primary-inset-shadow: 0 0 #0000;
-  --color-btn-primary-hover-bg: #46954a;
-  --color-btn-primary-hover-border: #cdd9e51a;
-  --color-btn-primary-selected-bg: #347d39;
+  --color-btn-active-border: transparent;
+  --color-btn-selected-bg: #353b43;
+  --color-btn-primary-text: var(--color);
+  --color-btn-primary-bg: rgb(57, 108, 184);
+  --color-btn-primary-border: transparent;
+  --color-btn-primary-shadow: 0 0 #00000000;
+  --color-btn-primary-inset-shadow: 0 0 #00000000;
+  --color-btn-primary-hover-bg: rgb(50, 120, 225);
+  --color-btn-primary-hover-border: transparent;
+  --color-btn-primary-selected-bg: #3d444d;
   --color-btn-primary-selected-shadow: 0 0 #0000;
   --color-btn-primary-disabled-text: #cdd9e580;
-  --color-btn-primary-disabled-bg: #347d3999;
-  --color-btn-primary-disabled-border: #cdd9e51a;
-  --color-action-list-item-default-hover-bg: #909dab1f;
+  --color-btn-primary-disabled-bg: rgb(41, 83, 145);
+  --color-btn-primary-disabled-border: transparent;
+  --color-action-list-item-default-hover-bg: #909dab00;
   --color-segmented-control-bg: #636e7b1a;
-  --color-segmented-control-button-bg: #22272e;
-  --color-segmented-control-button-selected-border: #636e7b;
+  --color-segmented-control-button-bg: rgb(57, 108, 184);
+  --color-segmented-control-button-selected-border: transparent;
   --color-fg-default: #adbac7;
   --color-fg-muted: #768390;
   --color-fg-subtle: #545d68;
-  --color-canvas-default: #192734;
-  --color-canvas-overlay: #161b22;
-  --color-canvas-inset: #15202b;
-  --color-canvas-subtle: #253341;
-  --color-border-default: #444c56;
+  --color-canvas-default: var(--background);
+  --color-canvas-overlay: var(--background);
+  --color-canvas-inset: var(--background);
+  --color-canvas-subtle: var(--background);
+  --color-border-default: rgba(255, 255, 255, 0.15);
   --color-border-muted: #373e47;
   --color-neutral-muted: #636e7b66;
   --color-accent-fg: #539bf5;
@@ -89,7 +101,18 @@ main {
   --color-social-reaction-bg-hover: var(--color-scale-gray-7);
   --color-social-reaction-bg-reacted-hover: var(--color-scale-blue-8);
 
-  font-family: "JetBrainsMono NFM" !important;
+  scrollbar-color: color-mix(in srgb, var(--accent), transparent 60%)
+    transparent;
+  font-family: JetBrains Mono NFM !important;
+
+  * {
+    font-size: 16px;
+    font-family: Galmuri !important;
+
+    @media (max-width: 606px) {
+      font-size: 12px;
+    }
+  }
 }
 main .pagination-loader-container {
   background-image: url(https://github.com/images/modules/pulls/progressive-disclosure-line-dark.svg);
@@ -103,13 +126,14 @@ main .pagination-loader-container {
   flex-direction: column-reverse;
 }
 .gsc-header {
-  padding-bottom: 1rem;
+  border: none;
 }
 .gsc-comments > .gsc-header {
+  border: none;
   order: 1;
 }
 .gsc-comments > .gsc-comment-box {
-  margin-bottom: 1rem;
+  padding: 0;
   order: 2;
 }
 .gsc-comments > .gsc-timeline {
@@ -120,4 +144,17 @@ main .pagination-loader-container {
 }
 main .gsc-loading-image {
   background-image: url(https://github.githubassets.com/images/mona-loading-dimmed.gif);
+}
+
+time {
+  font-size: 0.8em;
+}
+
+.font-medium {
+  font-size: 0.8em;
+}
+
+button.btn {
+  font-size: inherit !important;
+  font-weight: bold;
 }
