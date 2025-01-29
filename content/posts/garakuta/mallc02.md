@@ -1,5 +1,5 @@
 +++
-title = "malloc은 사드세요 제발 (2)"
+title = "malloc은 사드세요 제발 (2).txt"
 date = "2025-01-15T11:05:52Z"
 author = "sayoon"
 tags = ["뭐했더라"]
@@ -11,4 +11,3 @@ hideComments = false
 +++
 
 허허...
-

@@ -9,11 +9,6 @@
   font-weight: bold;
 
   &:hover {
-    text-decoration: underline;
-  }
-
-  &:active {
-    transform: scale(0.9);
-    transition: all 50ms ease-out;
+    text-decoration: underline dotted;
   }
 }

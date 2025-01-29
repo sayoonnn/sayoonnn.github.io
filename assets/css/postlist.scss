@@ -24,16 +24,5 @@
     padding: 1px 3px;
     color: var(--accent);
     text-decoration: underline;
-
-    &:hover {
-      background-color: var(--accent);
-      color: var(--background);
-    }
-
-    &:active {
-      transform: scale(0.8);
-    }
-
-    transition: all 0.3s;
   }
 }

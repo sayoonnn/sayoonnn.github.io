@@ -1,25 +1,35 @@
-{{ if or .NextInSection .PrevInSection }}
+{{ $currentTag := index .Params.tags 0 }} {{ $taggedPages := where
+.Site.RegularPages "Params.tags" "intersect" (slice $currentTag) }} {{
+$sortedPages := sort $taggedPages "Date" "desc" }} {{ $currentPage := . }} {{
+$prev := "" }} {{ $next := "" }} {{ range $index, $page := $sortedPages }} {{ if
+eq $page.Permalink $currentPage.Permalink }} {{ if gt $index 0 }} {{ $next =
+index $sortedPages (sub $index 1) }} {{ end }} {{ if lt $index (sub (len
+$sortedPages) 1) }} {{ $prev = index $sortedPages (add $index 1) }} {{ end }} {{
+end }} {{ end }} {{ if or $next $prev }}
+
 <div class="pagination">
   <div class="pagination__title">
     <span class="pagination__title-h">{{ $.Site.Params.ReadOtherPosts }}</span>
     <hr />
   </div>
   <div class="pagination__buttons">
-    {{ if .NextInSection }}
     <div class="previous">
-      <a href="{{ .NextInSection.Permalink }}">
+      {{ if $next }}
+      <a href="{{ $next.Permalink }}">
         <span class="button__icon">←</span>
-        <span class="button__text">[{{ .NextInSection.Title }}]</span>
+        <span class="button__text">[{{ $next.Title }}]</span>
       </a>
+      {{ end }}
     </div>
-    {{ end }} {{ if.PrevInSection }}
+
     <div class="next">
-      <a href="{{ .PrevInSection.Permalink }}">
-        <span class="button__text">[{{ .PrevInSection.Title }}]</span>
+      {{ if $prev }}
+      <a href="{{ $prev.Permalink }}">
+        <span class="button__text">[{{ $prev.Title }}]</span>
         <span class="button__icon">→</span>
       </a>
+      {{ end }}
     </div>
-    {{ end }}
   </div>
 </div>
 {{ end }}

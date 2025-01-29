@@ -51,6 +51,6 @@ hideComments = false
 
 ## 문제
 
-<a href="/posts/probs/11047" class="button">11047번: 동전 0</a>
+[[11047번: 동전 0]](/posts/probs/11047)
 
 업데이트 중...

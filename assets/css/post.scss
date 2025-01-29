@@ -1,3 +1,22 @@
+@keyframes fadeEffect {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  * {
+    animation: fadeEffect 0.5s ease-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 15%;
+  }
+}
+
 .index-content {
   margin-top: 20px;
 }
@@ -17,6 +36,12 @@
 
 .posts {
   width: 100%;
+}
+
+.on-list {
+  animation: fadeIn 0.5s ease-out;
+  animation-timeline: view();
+  animation-range: entry 10% cover 60%;
 }
 
 .post {
@@ -44,9 +69,6 @@
         margin: 0 8px;
       }
     }
-  }
-
-  &-last-updated {
   }
 
   &-title {
@@ -86,7 +108,12 @@
     margin-top: 30px;
 
     & a {
-      color: var(--article-link-color);
+      color: var(--accent);
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: underline dotted;
+      }
     }
   }
 

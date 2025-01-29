@@ -4,7 +4,8 @@
   margin-right: auto;
 }
 
-button {
+button,
+.button {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -85,19 +86,5 @@ a.read-more:active {
     appearance: none;
     cursor: pointer;
     outline: none;
-  }
-}
-
-a.button {
-  font-weight: bold;
-
-  &::before {
-    content: "[";
-    color: var(--accent);
-  }
-
-  &::after {
-    content: "]";
-    color: var(--accent);
   }
 }
