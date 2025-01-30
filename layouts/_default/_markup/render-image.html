@@ -1,0 +1,8 @@
+<p>
+  <img src="{{ .Destination | safeURL }}"
+       alt="{{ .Text }}"
+       {{ with .Title }}title="{{ . }}"{{ end }}
+	   stlye="{{ with .Attributes.width }}width:{{ . }}{{ end }}"
+       
+       {{ with .Attributes.height }}height="{{ . }}"{{ end }} />
+</p>

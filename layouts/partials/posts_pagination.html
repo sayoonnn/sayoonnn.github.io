@@ -2,14 +2,17 @@
 .Site.RegularPages "Params.tags" "intersect" (slice $currentTag) }} {{
 $sortedPages := sort $taggedPages "Date" "desc" }} {{ $currentPage := . }} {{
 $prev := "" }} {{ $next := "" }} {{ range $index, $page := $sortedPages }} {{ if
-eq $page.Permalink $currentPage.Permalink }} {{ if gt $index 0 }} {{ $next =
+eq $page.Permalink $currentPage.Permalink }} {{ if gt $index 0 }} {{ $prev =
 index $sortedPages (sub $index 1) }} {{ end }} {{ if lt $index (sub (len
-$sortedPages) 1) }} {{ $prev = index $sortedPages (add $index 1) }} {{ end }} {{
+$sortedPages) 1) }} {{ $next = index $sortedPages (add $index 1) }} {{ end }} {{
 end }} {{ end }} {{ if or $next $prev }}
 
 <div class="pagination">
   <div class="pagination__title">
-    <span class="pagination__title-h"> <a href="/tags/{{ $currentTag }}">#{{ $currentTag }}</a> 의 {{ $.Site.Params.ReadOtherPosts }}</span>
+    <span class="pagination__title-h">
+      <a href="/tags/{{ $currentTag }}">#{{ $currentTag }}</a> 의 {{
+      $.Site.Params.ReadOtherPosts }}</span
+    >
     <hr />
   </div>
   <div class="pagination__buttons">

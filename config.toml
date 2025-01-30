@@ -1,7 +1,6 @@
 # build Settings
 enableRobotsTXT = true
 enableGitInfo = true
-disableFastRender = true
 cleanDestinationDir = true
 forceSyncStatic = true
 

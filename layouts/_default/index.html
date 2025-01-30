@@ -9,7 +9,7 @@
   <h3>{{ .Page.Title }}:</h3>
   <div>합계 {{ .Count }}</div>
   <ul>
-    {{ range .Pages }}
+    {{ range .Pages.Reverse }}
     <li>
       -rwxr--r-- 2 sayoon {{ .Date.Format "01 02 2006" }}
       <a href="{{ .Permalink }}">{{ .Title }}</a>
