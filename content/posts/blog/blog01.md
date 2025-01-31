@@ -68,7 +68,7 @@ CGO_ENABLED=1 go install -tags extended,withdeploy github.com/gohugoio/hugo@late
 
 지독한 홍대병에 컨셉충으로서 평범한 테마는 용납못한다
 
-![alt text](image.png)
+![alt text](image.webp)
 
 [re-terminal](https://themes.gohugo.io/themes/hugo-theme-re-terminal/) 터미널 테마 굳
 

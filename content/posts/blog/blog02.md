@@ -18,9 +18,9 @@ description = "블로그 만들기 힘들엉"
 
 [giscus app](https://github.com/apps/giscus)
 
-![alt text](image.png)
+![alt text](image.webp)
 
 <kbd>Install</kbd>을 누르고,  
 내 계정을 선택해준 다음
 
-![alt text](image-2.png)
+![alt text](image-2.webp)
