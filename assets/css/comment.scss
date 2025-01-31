@@ -1,4 +1,8 @@
 section.comment {
+  &::-webkit-details-marker {
+    display: none;
+  }
+
   details {
     margin-top: 70px;
   }

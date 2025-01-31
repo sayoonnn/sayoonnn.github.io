@@ -16,7 +16,7 @@ $centerTheme: {{ if $.Site.Params.CenterTheme }}center{{ else }}flex-start{{ end
 @import "banner";
 
 @import "prism";
-@import "syntax";
+// @import "syntax";
 @import "code";
 @import "terms";
 @import "gist";
