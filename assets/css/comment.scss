@@ -1,31 +1,18 @@
 section.comment {
-  &::-webkit-details-marker {
-    display: none;
-  }
-
   details {
     margin-top: 70px;
-  }
-
-  summary::after {
-    content: " | ∇";
-  }
-
-  details[open] summary::after {
-    content: " | ∆";
   }
 
   summary {
     user-select: none;
     font-size: 0.9rem !important;
     text-align: center;
-    width: 6rem;
+    width: 5rem;
     padding: 5px 10px;
     font-size: 1em;
     border: 2.5px solid var(--accent);
     cursor: pointer;
     color: var(--accent);
-    list-style: none;
 
     &:hover {
       background-color: color-mix(in srgb, var(--accent), transparent 90%);
