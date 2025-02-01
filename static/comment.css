@@ -103,7 +103,6 @@ main {
 
   scrollbar-color: color-mix(in srgb, var(--accent), transparent 60%)
     transparent;
-  font-family: JetBrains Mono NFM !important;
 
   * {
     font-size: 16px;
