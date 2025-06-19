@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+  <head>
+    <title>GUNZO FACE MAKER</title>
+    <meta charset="UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/konva@9/konva.min.js"></script>
+    <link
+      href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css"
+      rel="stylesheet"
+    />
+    <style>
+      @font-face {
+        font-family: "koverwatch";
+        src: url("/fonts/koverwatch.ttf");
+      }
+
+      @font-face {
+        font-family: "bebasneue";
+        src: url("/fonts/BebasNeue.otf");
+      }
+
+      @font-face {
+        font-family: "venusrising";
+        src: url("/fonts/VenusRising.ttf");
+      }
+
+      @font-face {
+        font-family: "galmuri";
+        src: url("/fonts/venus rising rg.ttf");
+      }
+
+      * {
+        transition: all ease-in-out 150ms;
+      }
+    </style>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .font-koverwatch {
+          font-family: "koverwatch";
+        }
+        .font-nanum {
+          font-family: "NanumSquareNeo";
+        }
+        .font-nanumB {
+          font-family: "NanumSquareNeoBold";
+        }
+        .font-nanumEB {
+          font-family: "NanumSquareNeoExtraBold";
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-stone-800 text-white">
+    <h1 class="font-koverwatch text-6xl w-fit mx-auto my-5">
+      GUNZO FACE MAKER <span class="text-lg">demo</span>
+    </h1>
+    <div class="mx-auto w-fit text-xs">
+      thanks to <span class="text-yellow-400">FMGUNZO</span>
+    </div>
+    <hr class="w-[80%] mx-auto my-10 text-stone-50 border-2" />
+    <div class="flex gap-20 justify-center font-nanumB m-5">
+      <div>
+        <canvas
+          id="canvas"
+          class="w-[500px] aspect-square cursor-grab"
+        ></canvas>
+        <div class="w-full p-7 font-nanum text-md">
+          <div>
+            ※ 확대/축소 -> <span class="text-yellow-400">마우스 스크롤</span>
+          </div>
+          <div>※ 위치 조정 -> <span class="text-yellow-400">드래그</span></div>
+        </div>
+      </div>
+      <div class="w-[500px] flex flex-col gap-7 text-xl">
+        <label
+          class="cursor-pointer bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 w-[150px] text-center text-base"
+        >
+          📂 이미지 선택
+          <input id="fileInput" type="file" accept="image/*" class="hidden" />
+        </label>
+
+        <div class="flex items-center">
+          <label for="human_id" class="w-[90px]">인물 ID</label>
+          <input
+            id="human_id"
+            type="text"
+            class="w-[300px] bg-white rounded px-2 py-1 text-black mx-3 w-[300px] text-base"
+            placeholder="입력시 파일명 변경"
+          />
+        </div>
+
+        <div class="flex items-center">
+          <label for="name" class="w-[90px]">인물 이름</label>
+          <input
+            id="name"
+            type="text"
+            class="w-[300px] bg-white rounded px-2 py-1 text-black mx-3 w-[300px] text-base"
+          />
+        </div>
+
+        <div class="flex items-center">
+          <label for="filter" class="w-[90px]">사진 필터</label>
+          <select
+            id="filter"
+            name="example"
+            class="mx-3 text-black bg-white px-2 py-1 rounded w-[300px]"
+          >
+            <option value="filter2">필터 1</option>
+            <option value="filter3">필터 2</option>
+            <option value="filter4">필터 3</option>
+            <option value="filter1">=== 필터 없음 ===</option>
+          </select>
+        </div>
+
+        <div class="flex items-center">
+          <label for="font_color" class="w-[90px]">폰트 색상 </label>
+          <input
+            type="color"
+            list="color_list"
+            id="font_color"
+            value="#ffd700"
+            class="mx-3 border-1 bg-white text-black rounded"
+          />
+          <datalist id="color_list">
+            <option value="#ffd700">골드</option>
+            <option value="#c0c0c0">실버</option>
+          </datalist>
+        </div>
+
+        <div class="flex items-center">
+          <label for="length" class="w-[90px]">폰트 크기</label>
+          <select
+            id="font_size"
+            name="example"
+            class="mx-3 text-black bg-white px-2 py-1 rounded w-[300px]"
+          >
+            <option value="default">=== 기본 ===</option>
+            <option value="small">작게</option>
+          </select>
+        </div>
+
+        <button
+          id="save_button"
+          class="cursor-pointer bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600 w-[150px] text-center text-base"
+        >
+          💾 저장
+        </button>
+      </div>
+    </div>
+    <script src="/script/canvas.js"></script>
+  </body>
+</html>
