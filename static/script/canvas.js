@@ -36,10 +36,8 @@ document.addEventListener("paste", (e) => {
     if (item.type.startsWith("image/")) {
       const file = item.getAsFile();
       const reader = new FileReader();
-      reader.onload = function (evt) {
-        const image = document.createElement("img");
-        image.src = evt.target.result;
-        document.body.appendChild(image); // 없으면 append 안 됨
+      reader.onload = function (e) {
+        image.src = e.target.result;
       };
       reader.readAsDataURL(file);
       return;
@@ -52,8 +50,8 @@ fileInput.addEventListener("change", (e) => {
   if (!file) return;
 
   const reader = new FileReader();
-  reader.onload = (event) => {
-    image.src = event.target.result;
+  reader.onload = (e) => {
+    image.src = e.target.result;
   };
   reader.readAsDataURL(file);
 });
