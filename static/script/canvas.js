@@ -28,17 +28,21 @@ const filter = new Image();
 filter.src = "/img/" + document.getElementById("filter").value + ".png";
 filter.onload = drawAll;
 
-window.addEventListener("paste", (e) => {
-  const items = e.clipboardData.items;
-  for (let i = 0; i < items.length; i++) {
-    const item = items[i];
-    if (item.kind === "file") {
+document.addEventListener("paste", (e) => {
+  const items = e.clipboardData?.items;
+  if (!items) return;
+
+  for (const item of items) {
+    if (item.type.startsWith("image/")) {
       const file = item.getAsFile();
       const reader = new FileReader();
       reader.onload = function (evt) {
+        const image = document.createElement("img");
         image.src = evt.target.result;
+        document.body.appendChild(image); // 없으면 append 안 됨
       };
       reader.readAsDataURL(file);
+      return;
     }
   }
 });
