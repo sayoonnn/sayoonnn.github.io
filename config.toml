@@ -48,6 +48,8 @@ subtitle = "개발바닥"
 	# Provide a string as a prefix for the last update date. By default, it looks like this: 2020-xx-xx [Updated: 2020-xx-xx] :: Author
 	updatedDatePrefix = "마지막 수정"
 
+	contentDir = "content/posts"
+
 	# set all headings to their default size (depending on browser settings)
 	# oneHeadingSize = true # default
 
@@ -119,6 +121,11 @@ subtitle = "개발바닥"
 				url = "https://github.com/sayoonnn/sayoonnn.github.io"
 				params = { NewTab = true }
 
+			[[languages.ko.menu.main]]
+				identifier = "gunzo"
+				name = "/건조 페이스팩 메이커"
+				url = "https://sayoonnn.github.io/gunzo"
+				params = { NewTab = true }
 [markup]
 	[markup.goldmark]
 		[markup.goldmark.renderer]
