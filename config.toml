@@ -9,7 +9,7 @@ baseurl = "/"
 defaultContentLanguage = "ko"
 languageCode = "ko-KR"
 pagerSize = 5
-title = "sayoonnn.dev"
+title = "sayoon.shell"
 subtitle = "개발바닥"
 
 
@@ -98,7 +98,7 @@ subtitle = "개발바닥"
 		words = "단어"
 
 		[languages.ko.params.logo]
-			logoText = "sayoonnn.shell"
+			logoText = "sayoon.shell"
 			logoHomeLink = "/"
 
 		[languages.ko.menu]
